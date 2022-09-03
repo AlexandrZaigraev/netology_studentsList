@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.ArrayList;
+
 public class Student {
 
     private String fio;
@@ -10,6 +12,12 @@ public class Student {
         this.fio = fio;
         this.groupName = groupName;
         this.papersNumber = papersNumber;
+    }
+
+    public Student(String[] value) {
+        this.fio = value[0].trim();
+        this.groupName = Integer.parseInt(value[1].trim());
+        this.papersNumber = value[2].trim();
     }
 
     @Override

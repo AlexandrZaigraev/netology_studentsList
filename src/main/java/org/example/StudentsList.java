@@ -10,7 +10,14 @@ public class StudentsList {
     }
 
     public void addStudent(Student student) {
-        this.students.add(student);
+
+        var isAdded = this.students.add(student);
+        if (isAdded){
+            System.out.println("Студент добавлен " + student);
+        } else {
+            System.out.println("Такой студент уже есть");
+        }
+
     }
 
     @Override

@@ -1,7 +1,12 @@
 package org.example;
 
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) {
+
+        UserInputHandler userInputHandler = new UserInputHandler(new StudentsList());
+        userInputHandler.scan();
 
         StudentsList studentsList = new StudentsList();
         studentsList.addStudent(new Student("Aboba", 555, "123"));
