@@ -8,6 +8,9 @@ public class StudentsList {
     public StudentsList() {
         this.students = new HashSet<>();
     }
+    public HashSet<Student> getStudents() {
+        return students;
+    }
 
     public void addStudent(Student student) {
 
@@ -17,7 +20,6 @@ public class StudentsList {
         } else {
             System.out.println("Такой студент уже есть");
         }
-
     }
 
     @Override
