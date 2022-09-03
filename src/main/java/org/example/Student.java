@@ -1,14 +1,12 @@
 package org.example;
 
-import java.util.ArrayList;
-
 public class Student {
 
     private String fio;
-    private int groupName;
+    private String groupName;
     private String papersNumber;
 
-    public Student(String fio, int groupName, String papersNumber) {
+    public Student(String fio, String groupName, String papersNumber) {
         this.fio = fio;
         this.groupName = groupName;
         this.papersNumber = papersNumber;
@@ -16,7 +14,7 @@ public class Student {
 
     public Student(String[] value) {
         this.fio = value[0].trim();
-        this.groupName = Integer.parseInt(value[1].trim());
+        this.groupName = value[1].trim();
         this.papersNumber = value[2].trim();
     }
 

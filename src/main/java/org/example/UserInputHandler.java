@@ -16,8 +16,12 @@ public class UserInputHandler {
         while (true) {
             System.out.println("Введите информацию о студенте: \"ФИО, номер группы, номер студенческого билета\"\n");
             inputLine = myScan.nextLine();
-            this.studentsList.addStudent(new Student(inputLine.split(",")));
+            if (inputLine.equals("end")) {
+                System.out.println(studentsList);
+                break;
+            } else {
+                this.studentsList.addStudent(new Student(inputLine.split(",")));
+            }
         }
     }
-
 }
